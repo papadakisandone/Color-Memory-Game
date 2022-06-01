@@ -3,8 +3,8 @@ var gamePattern = [];
 var userClickedPattern = [];
 var lvl = 0;
 
-// wait a button to be pressed to start the game
-$("body").dblclick(function () {
+// double click and double touch for ipads
+$("body").on("dblclick touchend", function () {
   if (lvl === 0) {
     setTimeout(function () {
       nextSequence();
