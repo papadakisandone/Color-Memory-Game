@@ -4,7 +4,7 @@ var userClickedPattern = [];
 var lvl = 0;
 
 // wait a button to be pressed to start the game
-$("body").click(function () {
+$("body").dblclick(function () {
   if (lvl === 0) {
     setTimeout(function () {
       nextSequence();
@@ -46,7 +46,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       $("body").removeClass("game-over"), 200;
     });
-    $("#level-title").text("Game Over, Click on Screen to Restart");
+    $("#level-title").text("Game Over, DoubleClick on Screen to Restart");
     $("h3").text(`Final Level ${lvl - 1}`);
 
     //reset
